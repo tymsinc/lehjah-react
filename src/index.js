@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Lehjah = ({ business_id, public_key, token, environment = 'sandbox', width = '100%', height = '100%' }) => {
+const Lehjah = ({ business_id, public_key, token, environment = 'sandbox', variable1 = '', variable2 = '', variable3 = '', variable4 = '', variable5 = '', width = '100%', height = '100%' }) => {
     const baseUrl = environment === 'sandbox' 
         ? 'https://sandbox-widget.lehjah.com' 
         : 'https://widget.lehjah.com';
 
-    const iframeSrc = `${baseUrl}/v1/app/${public_key}?business_id=${business_id}&token=${token}`;
+    const iframeSrc = `${baseUrl}/v1/app/${public_key}?business_id=${business_id}&token=${token}&variable1=${variable1}&variable2=${variable2}&variable3=${variable3}&variable4=${variable4}&variable5=${variable5}`;
 
     return (
         <iframe
@@ -24,6 +24,11 @@ Lehjah.propTypes = {
     public_key: PropTypes.string.isRequired,
     token: PropTypes.string.isRequired,
     environment: PropTypes.oneOf(['sandbox', 'production']),
+    variable1: PropTypes.any,
+    variable2: PropTypes.any,
+    variable3: PropTypes.any,
+    variable4: PropTypes.any,
+    variable5: PropTypes.any,
     width: PropTypes.string,
     height: PropTypes.string
 };
