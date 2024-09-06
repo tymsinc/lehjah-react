@@ -13,6 +13,10 @@ var Lehjah = function Lehjah(_ref) {
     token = _ref.token,
     _ref$environment = _ref.environment,
     environment = _ref$environment === void 0 ? 'sandbox' : _ref$environment,
+    _ref$mode = _ref.mode,
+    mode = _ref$mode === void 0 ? 'full' : _ref$mode,
+    _ref$page = _ref.page,
+    page = _ref$page === void 0 ? '' : _ref$page,
     _ref$variable = _ref.variable1,
     variable1 = _ref$variable === void 0 ? '' : _ref$variable,
     _ref$variable2 = _ref.variable2,
@@ -28,7 +32,7 @@ var Lehjah = function Lehjah(_ref) {
     _ref$height = _ref.height,
     height = _ref$height === void 0 ? '100%' : _ref$height;
   var baseUrl = environment === 'sandbox' ? 'https://sandbox-widget.lehjah.com' : 'https://widget.lehjah.com';
-  var iframeSrc = "".concat(baseUrl, "/v1/app/").concat(public_key, "?business_id=").concat(business_id, "&token=").concat(token, "&variable1=").concat(variable1, "&variable2=").concat(variable2, "&variable3=").concat(variable3, "&variable4=").concat(variable4, "&variable5=").concat(variable5);
+  var iframeSrc = "".concat(baseUrl, "/v1/app/").concat(public_key, "?business_id=").concat(business_id, "&token=").concat(token, "&mode=").concat(mode, "&page=").concat(page, "&variable1=").concat(variable1, "&variable2=").concat(variable2, "&variable3=").concat(variable3, "&variable4=").concat(variable4, "&variable5=").concat(variable5);
   return /*#__PURE__*/_react["default"].createElement("iframe", {
     src: iframeSrc,
     width: width,
@@ -44,6 +48,8 @@ Lehjah.propTypes = {
   public_key: _propTypes["default"].string.isRequired,
   token: _propTypes["default"].string.isRequired,
   environment: _propTypes["default"].oneOf(['sandbox', 'production']),
+  mode: _propTypes["default"].oneOf(['full', 'page']),
+  page: _propTypes["default"].string,
   variable1: _propTypes["default"].any,
   variable2: _propTypes["default"].any,
   variable3: _propTypes["default"].any,

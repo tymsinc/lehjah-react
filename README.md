@@ -61,6 +61,15 @@ export default MyApp;
 - **Default:** `'sandbox'`
 - **Description:** Specifies the environment in which the widget will run. The default value is `'sandbox'`. Use `'production'` for live environments.
 
+### `mode` (optional)
+- **Type:** `'full' | 'page'`
+- **Default:** `'full'`
+- **Description:** Specifies the mode in which the widget will display. The default value is `'full'` which shows all the features together. Use `'page'` if you are only interested in a specific page.
+
+### `page` (optional, only if mode equals `page`)
+- **Type:** `'overview' | 'transactions' | 'invoices' | 'bills' | 'inventory' | 'restocks' | 'financial_statements' | 'income_statement' | 'balance_sheet' | 'trial_balance' | 'cashflow_statement' | 'manual_journal' | 'general_ledger' | 'chart_of_accounts'`
+- **Description:** The specific feature to be displayed when the widget loads, this makes it possible for you to distribute the features into different pages on your platform.
+
 ### `variable1` (optional, alongside `variable2`, `variable3`, `variable4` and `variable5`)  
 - **Type:** `any`
 - **Description:** The variable1 and the other permitted variable names from 1 to 5 allows you to add up to five (5) custom variables you might need to extend the widget data connection capabilities.
