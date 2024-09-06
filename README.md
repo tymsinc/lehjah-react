@@ -61,6 +61,10 @@ export default MyApp;
 - **Default:** `'sandbox'`
 - **Description:** Specifies the environment in which the widget will run. The default value is `'sandbox'`. Use `'production'` for live environments.
 
+### `variable1` (optional, alongside `variable2`, `variable3`, `variable4` and `variable5`)  
+- **Type:** `any`
+- **Description:** The variable1 and the other permitted variable names from 1 to 5 allows you to add up to five (5) custom variables you might need to extend the widget data connection capabilities.
+
 ### `width` (optional)
 - **Type:** `string`
 - **Default:** `'100%'`
