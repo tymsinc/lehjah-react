@@ -6,7 +6,7 @@ const Lehjah = ({ business_id, public_key, token, environment = 'sandbox', mode 
         ? 'https://sandbox-widget.lehjah.com' 
         : 'https://widget.lehjah.com';
 
-    const iframeSrc = `${baseUrl}/v1/app/${public_key}?business_id=${business_id}&token=${token}&mode=${mode}&page=${page}&variable1=${variable1}&variable2=${variable2}&variable3=${variable3}&variable4=${variable4}&variable5=${variable5}`;
+    const iframeSrc = `${baseUrl}/v1/app/${public_key}?business_id=${business_id}&auth_token=${token}&mode=${mode}&page=${page}&variable1=${variable1}&variable2=${variable2}&variable3=${variable3}&variable4=${variable4}&variable5=${variable5}`;
 
     return (
         <iframe

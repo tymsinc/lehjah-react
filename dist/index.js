@@ -32,7 +32,7 @@ var Lehjah = function Lehjah(_ref) {
     _ref$height = _ref.height,
     height = _ref$height === void 0 ? '100%' : _ref$height;
   var baseUrl = environment === 'sandbox' ? 'https://sandbox-widget.lehjah.com' : 'https://widget.lehjah.com';
-  var iframeSrc = "".concat(baseUrl, "/v1/app/").concat(public_key, "?business_id=").concat(business_id, "&token=").concat(token, "&mode=").concat(mode, "&page=").concat(page, "&variable1=").concat(variable1, "&variable2=").concat(variable2, "&variable3=").concat(variable3, "&variable4=").concat(variable4, "&variable5=").concat(variable5);
+  var iframeSrc = "".concat(baseUrl, "/v1/app/").concat(public_key, "?business_id=").concat(business_id, "&auth_token=").concat(token, "&mode=").concat(mode, "&page=").concat(page, "&variable1=").concat(variable1, "&variable2=").concat(variable2, "&variable3=").concat(variable3, "&variable4=").concat(variable4, "&variable5=").concat(variable5);
   return /*#__PURE__*/_react["default"].createElement("iframe", {
     src: iframeSrc,
     width: width,
